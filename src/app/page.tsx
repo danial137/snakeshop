@@ -67,7 +67,7 @@ export default async function Home() {
 
           <div className="col-span-full lg:col-span-1 w-full flex justify-center px-8 sm:px-16 md:px-0 mt-32 lg:mx-0 lg:mt-20 h-fit">
             <div className="relative md:max-w-xl">
-              <img src={locale === "fa" ? "/yourpik.png" : "/your-image.png"} className="absolute w-40 lg:w-52 inset-s-56 -top-20 select-none hidden sm:block lg:hidden xl:block" />
+              <img src={locale === "fa" ? "/yourpik.png" : "/your-image.png"} className="absolute w-40 lg:w-52 inset-s-56 -top-20 select-none hidden sm:block lg:hidden xl:block dark:bg-white" />
               <img src="/line.png" className="absolute w-20 -inset-s-6 -bottom-6 select-none" />
               <Phone imgSrc="/testimonials/1.jpg" className="w-64" />
             </div>
