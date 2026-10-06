@@ -1,8 +1,8 @@
 import "./globals.css"
 import { Vazirmatn } from "next/font/google"
 import ThemeProvider from "@/components/ThemeProvider"
-import Navbar from "@/components/Navbar"
 import { getLocale } from "@/lib/locale"
+import Navbar from "@/components/Navbar"
 
 const vazirmatn = Vazirmatn({
   subsets: ["arabic", "latin"],
