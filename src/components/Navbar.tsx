@@ -4,8 +4,12 @@ import ThemeToggle from "./ThemeToggle"
 import LangToggle from "./LangToggle"
 import { getLocale } from "@/lib/locale"
 import { dictionaries } from "@/lib/dictionaries"
+import { buttonVariants } from "./ui/button"
+import { ArrowRight } from "lucide-react"
 
 const Navbar = async () => {
+    const user = undefined
+    const isAdmin = false
     const locale = await getLocale()
     const t = dictionaries[locale]
 
@@ -19,6 +23,24 @@ const Navbar = async () => {
                     case<span className="text-green-600"> cobra </span>
 
                 </Link>
+
+
+                <div className="h-full flex items-center space-x-4">
+
+                    {user ? (
+
+                        <>
+                            <Link href='/api/auth/logout' className={buttonVariants({ size: "sm", variant: 'ghost' })}> Sign Out </Link>
+                            {isAdmin ? <Link href='/api/auth/logout' className={buttonVariants({ size: "sm", variant: 'ghost' })}> Dashboard </Link> : null}
+                            <Link href='/configure/upload' className={buttonVariants({ size: "sm", className: "hidden sm:flex itesm-center gap-1" })}> Create case <ArrowRight className="ml-1.5 h-5 w-5 transition-all" /> </Link>
+                        </>
+
+                    ) : (<>
+                        <Link href='/api/auth/register' className={buttonVariants({ size: "sm", variant: 'ghost' })}> Sign up </Link>
+                        <Link href='/api/auth/login' className={buttonVariants({ size: "sm", className: "hidden sm:flex itesm-center gap-1" })}> Login <ArrowRight className="ml-1.5 h-5 w-5 transition-all" /> </Link>
+                    </>)}
+
+                </div>
 
                 <div className="flex items-center gap-1">
                     <LangToggle locale={locale} label={t.nav.lang} />
