@@ -5,7 +5,7 @@ import LangToggle from "./LangToggle"
 import { getLocale } from "@/lib/locale"
 import { dictionaries } from "@/lib/dictionaries"
 
-const NavBar = async () => {
+const Navbar = async () => {
     const locale = await getLocale()
     const t = dictionaries[locale]
 
@@ -31,4 +31,4 @@ const NavBar = async () => {
     </nav>
 }
 
-export default NavBar
+export default Navbar
