@@ -16,7 +16,7 @@ export default async function Home() {
         <MaxWIdthWraper className="pb-24 pt-10 lg:grid lg:grid-cols-3 sm:pb-32 lg:gap-x-0 xl:gap-x-8 lg:pt-24 xl:pt-32 lg:pb-52">
           <div className="col-span-2 px-6 lg:px-0 lg:pt-4">
             <div className="relative mx-auto text-center lg:text-start flex flex-col items-center lg:items-start ">
-              <div className="absolute w-28 inset-0 -top-20 hidden lg:block ">
+              <div className="absolute inset-0 -top-10 w-16 sm:-top-14 sm:w-20 md:-top-16 md:w-24 lg:-top-20 lg:w-28">
                 <img src="/snake-1.png" className="w-full " />
               </div>
 
