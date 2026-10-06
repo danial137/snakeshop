@@ -1,6 +1,13 @@
 export const dictionaries = {
   en: {
-    nav: { theme: "Toggle theme", lang: "Change language" },
+    nav: {
+      theme: "Toggle theme",
+      lang: "Change language",
+      login: "Log in",
+      signUp: "Sign up",
+      signOut: "Sign Out",
+      case:"Ceate Case"
+    },
     home: {
       heroBefore: "Your Image on a ",
       heroHighlight: "Custom",
@@ -8,18 +15,26 @@ export const dictionaries = {
       introBefore: "Capture your favorite memories with your own ",
       introHighlight: "one-of-one",
       introAfter:
-        " phone case. SnakeShop allow you to protect your memories,not just your phone case",
+        " phone case. SnakeShop allows you to protect your memories, not just your phone case",
       features: [
-        "High-quality,durable material",
-        "5 year print guarentee",
-        "Modern iphone models supported",
+        "High-quality, durable material",
+        "5 year print guarantee",
+        "Modern iPhone models supported",
       ],
       count: "1.250",
       customers: "happy customers",
     },
   },
+
   fa: {
-    nav: { theme: "تغییر تم", lang: "تغییر زبان" },
+    nav: {
+      theme: "تغییر تم",
+      lang: "تغییر زبان",
+      login: "ورود",
+      signUp: "ثبت‌ نام",
+      signOut: "خروج",
+      case:"ساخت مدل"
+    },
     home: {
       heroBefore: "عکس خودتو بنداز رو یه قاب گوشیِ ",
       heroHighlight: "اختصاصی",
