@@ -87,11 +87,14 @@ export default async function Home() {
 
             <h2 className="order-1 mt-2 tracking-tight text-center text-balance leading-tight! font-bold text-5xl md:text-6xl text-gray-900 dark:text-zinc-50">What Our {''}<span className="relative px-2"> customers <Icons.underline className="hidden sm:block pointer-events-none absolute inset-x-0 top-full -mt-12 text-green-500" /> </span>{""} say </h2>
 
+            <img src="/snake-2.png" className="w-24 order-0 lg:order-2" />
+
 
           </div>
 
 
 
+          <div className="mx-auto grid max-w-2xl grid-cols-1 px-4 lg:mx-0 lg:max-w-none lg:grid-cols-2 gap-y-16 "> </div>
 
 
         </MaxWIdthWraper>
