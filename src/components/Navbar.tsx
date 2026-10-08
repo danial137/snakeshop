@@ -6,10 +6,12 @@ import { getLocale } from "@/lib/locale"
 import { dictionaries } from "@/lib/dictionaries"
 import { buttonVariants } from "./ui/button"
 import { ArrowRight } from "lucide-react"
+import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server"
 
 const Navbar = async () => {
-    const user = undefined
-    const isAdmin = false
+    const { getUser } = getKindeServerSession()
+    const user = await getUser()
+    const isAdmin = user?.email===process.env.ADMIN_EMAIL
     const locale = await getLocale()
     const t = dictionaries[locale]
 
@@ -37,23 +39,23 @@ const Navbar = async () => {
 
                     ) : (<>
                         <Link href='/api/auth/register' className={buttonVariants({ size: "sm", variant: 'ghost' })}> {t.nav.signUp} </Link>
-                            <Link
-                                href="/api/auth/login"
-                                className={buttonVariants({
-                                    size: "sm",
-                                    className: "group hidden sm:flex items-center gap-1",
-                                })}
-                            >
-                                {t.nav.login}
-                                <ArrowRight
-                                    className="ml-1.5 h-5 w-5 transition-transform duration-150 group-active:translate-x-1"
-                                />
-                            </Link>
+                        <Link
+                            href="/api/auth/login"
+                            className={buttonVariants({
+                                size: "sm",
+                                className: "group hidden sm:flex items-center gap-1",
+                            })}
+                        >
+                            {t.nav.login}
+                            <ArrowRight
+                                className="ml-1.5 h-5 w-5 transition-transform duration-150 group-active:translate-x-1"
+                            />
+                        </Link>
 
-                            <div className="h-8 w-px bg-zinc-200 hidden sm:block" />
+                        <div className="h-8 w-px bg-zinc-200 hidden sm:block" />
 
-                            <Link href='/configure/upload' className={buttonVariants({ size: "sm", className: "hidden sm:flex itesm-center gap-1" })}> {t.nav.case} <ArrowRight className="ml-1.5 h-5 w-5 transition-all" /> </Link>
-                           
+                        <Link href='/configure/upload' className={buttonVariants({ size: "sm", className: "hidden sm:flex itesm-center gap-1" })}> {t.nav.case} <ArrowRight className="ml-1.5 h-5 w-5 transition-all" /> </Link>
+
 
                     </>)}
 
