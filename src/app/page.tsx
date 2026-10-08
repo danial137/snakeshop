@@ -5,6 +5,7 @@ import { Check, Star } from "lucide-react";
 import Image from "next/image";
 import { getLocale } from "@/lib/locale";
 import { dictionaries } from "@/lib/dictionaries";
+import { Icons } from "@/components/Icon";
 
 export default async function Home() {
   const locale = await getLocale();
@@ -78,15 +79,19 @@ export default async function Home() {
       {/* value proposition section  */}
 
 
-      <section className="bg-slate-100 py-24">
+      <section className="bg-slate-100 dark:bg-zinc-950 py-24">
+
         <MaxWIdthWraper className="flex flex-col items-center gap-16 sm:gap-32">
 
           <div className="flex flex-col lg:flex-row items-center gap-4 sm:gap-6">
 
-            <h2 className="order-1 mt-2 tracking-tight text-center text-balance leading-tight! font-bold text-5xl md:text-6xl text-gray-900  "><span> customers </span>  say </h2>
+            <h2 className="order-1 mt-2 tracking-tight text-center text-balance leading-tight! font-bold text-5xl md:text-6xl text-gray-900 dark:text-zinc-50">What Our {''}<span className="relative px-2"> customers <Icons.underline className="hidden sm:block pointer-events-none absolute inset-x-0 top-full -mt-12 text-green-500" /> </span>{""} say </h2>
 
 
           </div>
+
+
+
 
 
         </MaxWIdthWraper>
