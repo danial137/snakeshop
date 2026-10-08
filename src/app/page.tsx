@@ -94,7 +94,44 @@ export default async function Home() {
 
 
 
-          <div className="mx-auto grid max-w-2xl grid-cols-1 px-4 lg:mx-0 lg:max-w-none lg:grid-cols-2 gap-y-16 "> </div>
+          <div className="mx-auto grid max-w-2xl grid-cols-1 px-4 lg:mx-0 lg:max-w-none lg:grid-cols-2 gap-y-16 ">
+
+
+            <div className="flex flex-auto flex-col gap-4 lg:pr-8 xl:pr-20">
+
+              <div className="flex gap-0.5 mb-2">
+
+                <Star className="h-5 w-5 text-green-600 fill-green-600" />
+                <Star className="h-5 w-5 text-green-600 fill-green-600" />
+                <Star className="h-5 w-5 text-green-600 fill-green-600" />
+                <Star className="h-5 w-5 text-green-600 fill-green-600" />
+                <Star className="h-5 w-5 text-green-600 fill-green-600" />
+
+
+              </div>
+
+              <div className="text-lg leading-8">
+
+                <p>
+
+                  "The case study is a great example of how to use the product. It shows how to use the product in a real-world scenario and how to get the most out of it. The case study is <span className="font-semibold p-0.5 bg-slate-800 text-white">the image is super clear</span>, on the case I had before,the image started fading into yellow-ish color after a couple week love it "
+
+
+
+                </p>
+
+              </div>
+
+              <div className="flex gap-4 mt-2">
+
+                <img className="rounded-full h-12 w-12 object-cover" src="/users/user-1.png" />
+
+              </div>
+
+
+            </div>
+
+          </div>
 
 
         </MaxWIdthWraper>
