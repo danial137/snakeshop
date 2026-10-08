@@ -6,7 +6,7 @@ export const dictionaries = {
       login: "Log in",
       signUp: "Sign up",
       signOut: "Sign Out",
-      case:"Ceate Case"
+      case: "Ceate Case",
     },
     home: {
       heroBefore: "Your Image on a ",
@@ -23,6 +23,17 @@ export const dictionaries = {
       ],
       count: "1.250",
       customers: "happy customers",
+      reviews: {
+        titleBefore: "What Our ",
+        titleHighlight: "customers",
+        titleAfter: " say",
+        review1Before:
+          '"The case study is a great example of how to use the product. It shows how to use the product in a real-world scenario and how to get the most out of it. The case study is ',
+        review1Highlight: "the image is super clear",
+        review1After:
+          ', on the case I had before,the image started fading into yellow-ish color after a couple week love it "',
+        user1: "Jonathan",
+      },
     },
   },
 
@@ -33,7 +44,7 @@ export const dictionaries = {
       login: "ورود",
       signUp: "ثبت‌ نام",
       signOut: "خروج",
-      case:"ساخت مدل"
+      case: "ساخت مدل",
     },
     home: {
       heroBefore: "عکس خودتو بنداز رو یه قاب گوشیِ ",
@@ -50,6 +61,17 @@ export const dictionaries = {
       ],
       count: "۱٬۲۵۰",
       customers: "مشتری راضی",
+      reviews: {
+        titleBefore: "",
+        titleHighlight: "مشتری‌هامون",
+        titleAfter: " چی می‌گن",
+        review1Before:
+          "«این نمونه‌کار یه مثال خیلی خوبه از اینکه چطوری باید از محصول استفاده کرد. نشون می‌ده تو دنیای واقعی چطور کار می‌کنه و چطور می‌شه بیشترین بهره رو ازش برد. ",
+        review1Highlight: "کیفیت عکس فوق‌العاده شفافه",
+        review1After:
+          "؛ رو قاب قبلیم عکس بعد از چند هفته به زردی می‌زد. عاشقشم»",
+        user1: "جاناتان",
+      },
     },
   },
 };
