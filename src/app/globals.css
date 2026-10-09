@@ -130,3 +130,31 @@
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
+
+
+@keyframes reviews-scroll-up {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(calc(-50% - 1rem));
+  }
+}
+
+.reviews-marquee {
+  animation: reviews-scroll-up
+    var(--reviews-duration, 40s) linear infinite;
+  will-change: transform;
+}
+
+.reviews-marquee-reverse {
+  animation-direction: reverse;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reviews-marquee {
+    animation: none;
+    will-change: auto;
+  }
+}
