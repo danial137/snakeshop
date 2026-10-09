@@ -2,9 +2,14 @@
 
 import { useRef } from "react";
 import MaxWIdthWraper from "./MaxWIdthWraper";
+import { useInView } from "framer-motion";
+
+const PHONES = ["/testimonials/1.jpg"];
 
 function ReviewGrid() {
   const containeRef = useRef<HTMLDivElement>(null);
+
+  const inInView = useInView(containeRef, { once: true, amount: 0.4 });
 
   return (
     <div
