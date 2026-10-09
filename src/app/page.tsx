@@ -89,7 +89,7 @@ export default async function Home() {
           </div>
 
           <div className="mx-auto grid max-w-2xl grid-cols-1 px-4 lg:mx-0 lg:max-w-none lg:grid-cols-2 gap-y-16 ">
-            <div className="flex flex-auto flex-col gap-4 lg:pe-8 xl:pe-20">
+            <div className="flex flex-auto flex-col gap-4 lg:pr-8 xl:pr-20">
               <div className="flex gap-0.5 mb-2">
                 <Star className="h-5 w-5 text-green-600 fill-green-600" />
                 <Star className="h-5 w-5 text-green-600 fill-green-600" />
@@ -109,6 +109,40 @@ export default async function Home() {
 
                 <div className="flex flex-col">
                   <p className="">{t.reviews.user1}</p>
+                  <div className="flex gap-1.5 items-center text-zinc-600">
+
+
+                    <Check className="h-4 w-4 stroke-[3px] text-green-600" />
+
+                    <p className="text-sm"> Verified Purchase </p>
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* second user review */}
+            <div className="flex flex-auto flex-col gap-4 lg:pe-8 xl:pe-20 xl:pr-5">
+              <div className="flex gap-0.5 mb-2">
+                <Star className="h-5 w-5 text-green-600 fill-green-600" />
+                <Star className="h-5 w-5 text-green-600 fill-green-600" />
+                <Star className="h-5 w-5 text-green-600 fill-green-600" />
+                <Star className="h-5 w-5 text-green-600 fill-green-600" />
+                <Star className="h-5 w-5 text-green-600 fill-green-600" />
+              </div>
+
+              <div className="text-lg leading-8">
+                <p>
+                  {t.reviews.review2Before}{" "}<span className="font-semibold p-0.5 bg-slate-800 text-white">{t.reviews.review2Highlight}</span>{" "}
+                </p>
+              </div>
+
+              <div className="flex gap-4 mt-2">
+                <img className="rounded-full h-12 w-12 object-cover" src="/users/user-2.png" alt="user" />
+
+                <div className="flex flex-col">
+                  <p className="">{t.reviews.user2}</p>
                   <div className="flex gap-1.5 items-center text-zinc-600">
 
 

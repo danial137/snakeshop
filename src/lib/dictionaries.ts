@@ -33,6 +33,11 @@ export const dictionaries = {
         review1After:
           ', on the case I had before,the image started fading into yellow-ish color after a couple week love it "',
         user1: "Jonathan",
+        review2Before:
+          '"I usually keep my phone together with my keys in my pocket and that led to some pretty heavy scratchmarks on all of my last phone cases. This one, besides a barely noticeable scratch on the corner,',
+        review2Highlight: "looks brand new after about half a year",
+        review2After: '."',
+        user2: "Sarah",
       },
     },
   },
@@ -71,6 +76,11 @@ export const dictionaries = {
         review1After:
           "؛ رو قاب قبلیم عکس بعد از چند هفته به زردی می‌زد. عاشقشم»",
         user1: "جاناتان",
+        review2Before:
+          "«من معمولاً گوشیم رو با کلیدهام تو یه جیب می‌ذارم و همین باعث شده بود رو همه‌ی قاب‌های قبلیم خط‌وخش‌های بدی بیفته. این یکی، جز یه خش خیلی کم‌پیدا گوشه‌ش،",
+        review2Highlight: "بعد از حدود شش ماه هنوز مثل روز اول نو می‌مونه",
+        review2After: ".»",
+        user2: "سارا",
       },
     },
   },
