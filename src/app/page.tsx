@@ -6,6 +6,7 @@ import Image from "next/image";
 import { getLocale } from "@/lib/locale";
 import { dictionaries } from "@/lib/dictionaries";
 import { Icons } from "@/components/Icon";
+import { Reviews } from "@/components/Reviews";
 
 export default async function Home() {
   const locale = await getLocale();
@@ -157,6 +158,15 @@ export default async function Home() {
             </div>
           </div>
         </MaxWIdthWraper>
+
+        <div className="pt-16">
+
+          <Reviews />
+
+        </div>
+
+
+
       </section>
     </div>
   );
