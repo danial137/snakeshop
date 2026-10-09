@@ -211,6 +211,23 @@ export default async function Home() {
           <Reviews locale={locale} />
         </div>
       </section>
+
+      <section>
+        <MaxWIdthWraper className="py-24">
+          <div className="mb-12 px-6 lg:px-8">
+            <div className="mx-auto max-w-2xl sm:text-center">
+              <h2 className="order-1 mt-2 tracking-tight text-center text-balance leading-tight! font-bold text-5xl md:text-6xl text-gray-900 dark:text-zinc-50">
+                {t.reviews.titleBefore}
+                <span className="relative px-2">
+                  {t.reviews.titleHighlight}
+                  <Icons.underline className="hidden sm:block pointer-events-none absolute inset-x-0 top-full -mt-12 text-green-500" />
+                </span>
+                {t.reviews.titleAfter}
+              </h2>
+            </div>
+          </div>
+        </MaxWIdthWraper>
+      </section>
     </div>
   );
 }
