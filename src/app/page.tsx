@@ -241,8 +241,15 @@ export default async function Home() {
                   className="rounded-md object-cover bg-white shadow-2xl ring-1 ring-gray-900/10 h-full w-full"
                 />
               </div>
+              <Phone className="w-60" imgSrc="/horse_phone.jpg" />
             </div>
           </div>
+
+          <ul className="smx-auto mt-12 max-w-prose sm:text-lg space-y-2 w-fit">
+            <li className="w-fit">
+              <Check className="h-5 w-5 text-green-600 inline mr-1.5" />
+            </li>
+          </ul>
         </MaxWIdthWraper>
       </section>
     </div>
