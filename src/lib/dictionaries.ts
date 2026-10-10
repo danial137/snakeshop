@@ -39,6 +39,11 @@ export const dictionaries = {
         review2After: '."',
         user2: "Sarah",
       },
+      upload: {
+        before: "upload your photo and get ",
+        highlight: "your own case",
+        after: " now",
+      },
     },
   },
 
@@ -81,6 +86,11 @@ export const dictionaries = {
         review2Highlight: "بعد از حدود شش ماه هنوز مثل روز اول نو می‌مونه",
         review2After: ".»",
         user2: "سارا",
+      },
+      upload: {
+        before: "عکستو آپلود کن و ",
+        highlight: "قاب مخصوص خودتو",
+        after: " همین حالا بگیر",
       },
     },
   },

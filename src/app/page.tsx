@@ -217,11 +217,11 @@ export default async function Home() {
           <div className="mb-12 px-6 lg:px-8">
             <div className="mx-auto max-w-2xl sm:text-center">
               <h2 className="order-1 mt-2 tracking-tight text-center text-balance leading-tight! font-bold text-5xl md:text-6xl text-gray-900 dark:text-zinc-50">
-                upload your photo and get {""}
+                {t.upload.before}
                 <span className="relative px-2 bg-green-600 text-white">
-                  your own case
+                  {t.upload.highlight}
                 </span>
-                now
+                {t.upload.after}
               </h2>
             </div>
           </div>
@@ -229,10 +229,18 @@ export default async function Home() {
           <div className="mx-auto max-w-6xl px-6 lg:px-8">
             <div className="relative flex flex-col items-center md:grid grid-cols-2 gap-40">
               <img
-                src="/arrow.png"
+                src={locale === "fa" ? "/arrow-fa.png" : "/arrow.png"}
                 alt=""
-                className="absolute top-25rem md:top-1/2 -tranlslate-y-1/2 z-10 left-1/2 -tranlsate-x-1/2 rotate-90 md:rotate-0"
+                className="absolute top-100 md:top-1/2 -translate-y-1/2 z-10 left-1/2 -translate-x-1/2 rotate-90 md:rotate-0"
               />
+
+              <div className="relative h-80 md:h-full w-full md:justify-self-end max-w-sm rounded-xl bg-gray-900/10 lg:rounded-2xl">
+                <img
+                  src="horse.jpg"
+                  alt=""
+                  className="rounded-md object-cover bg-white shadow-2xl ring-1 ring-gray-900/10 h-full w-full"
+                />
+              </div>
             </div>
           </div>
         </MaxWIdthWraper>
