@@ -217,13 +217,22 @@ export default async function Home() {
           <div className="mb-12 px-6 lg:px-8">
             <div className="mx-auto max-w-2xl sm:text-center">
               <h2 className="order-1 mt-2 tracking-tight text-center text-balance leading-tight! font-bold text-5xl md:text-6xl text-gray-900 dark:text-zinc-50">
-                {t.reviews.titleBefore}
-                <span className="relative px-2">
-                  {t.reviews.titleHighlight}
-                  <Icons.underline className="hidden sm:block pointer-events-none absolute inset-x-0 top-full -mt-12 text-green-500" />
+                upload your photo and get {""}
+                <span className="relative px-2 bg-green-600 text-white">
+                  your own case
                 </span>
-                {t.reviews.titleAfter}
+                now
               </h2>
+            </div>
+          </div>
+
+          <div className="mx-auto max-w-6xl px-6 lg:px-8">
+            <div className="relative flex flex-col items-center md:grid grid-cols-2 gap-40">
+              <img
+                src="/arrow.png"
+                alt=""
+                className="absolute top-25rem md:top-1/2 -tranlslate-y-1/2 z-10 left-1/2 -tranlsate-x-1/2 rotate-90 md:rotate-0"
+              />
             </div>
           </div>
         </MaxWIdthWraper>
