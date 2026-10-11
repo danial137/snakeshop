@@ -248,6 +248,19 @@ export default async function Home() {
           <ul className="smx-auto mt-12 max-w-prose sm:text-lg space-y-2 w-fit">
             <li className="w-fit">
               <Check className="h-5 w-5 text-green-600 inline mr-1.5" />
+              High-quality silicone material
+            </li>
+            <li className="w-fit">
+              <Check className="h-5 w-5 text-green-600 inline mr-1.5" />
+              Scratch - and fingerprint resistant coatings
+            </li>
+            <li className="w-fit">
+              <Check className="h-5 w-5 text-green-600 inline mr-1.5" />
+              High-quality silicone material
+            </li>
+            <li className="w-fit">
+              <Check className="h-5 w-5 text-green-600 inline mr-1.5" />
+              High-quality silicone material
             </li>
           </ul>
         </MaxWIdthWraper>
