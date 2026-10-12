@@ -1,19 +1,21 @@
 import MaxWIdthWraper from "@/components/MaxWIdthWraper";
 import Phone from "@/components/Phone";
 import { Checkbox } from "@base-ui/react";
-import { Check, Star } from "lucide-react";
+import { ArrowRight, Check, Star } from "lucide-react";
 import Image from "next/image";
 import { getLocale } from "@/lib/locale";
 import { dictionaries } from "@/lib/dictionaries";
 import { Icons } from "@/components/Icon";
 import { Reviews } from "@/components/Reviews";
+import Link from "next/link";
+import { buttonVariants } from "@/components/ui/button";
 
 export default async function Home() {
   const locale = await getLocale();
   const t = dictionaries[locale].home;
 
   return (
-    <div className="bg-slate-50 dark:bg-zinc-950">
+    <div className="bg-slate-50 dark:bg-zinc-950 overflow-x-clip">
       <section>
         <MaxWIdthWraper className="pb-24 pt-10 lg:grid lg:grid-cols-3 sm:pb-32 lg:gap-x-0 xl:gap-x-8 lg:pt-24 xl:pt-32 lg:pb-52">
           <div className="col-span-2 px-6 lg:px-0 lg:pt-4">
@@ -131,7 +133,7 @@ export default async function Home() {
           </div>
 
           <div className="mx-auto grid max-w-2xl grid-cols-1 px-4 lg:mx-0 lg:max-w-none lg:grid-cols-2 gap-y-16 ">
-            <div className="flex flex-auto flex-col gap-4 lg:pr-8 xl:pr-20">
+            <div className="flex flex-auto flex-col gap-4 lg:pe-8 xl:pe-20">
               <div className="flex gap-0.5 mb-2">
                 <Star className="h-5 w-5 text-green-600 fill-green-600" />
                 <Star className="h-5 w-5 text-green-600 fill-green-600" />
@@ -183,7 +185,8 @@ export default async function Home() {
                   {t.reviews.review2Before}{" "}
                   <span className="font-semibold p-0.5 bg-slate-800 text-white">
                     {t.reviews.review2Highlight}
-                  </span>{" "}
+                  </span>
+                  {t.reviews.review2After}
                 </p>
               </div>
 
@@ -231,7 +234,9 @@ export default async function Home() {
               <img
                 src={locale === "fa" ? "/arrow-fa.png" : "/arrow.png"}
                 alt=""
-                className="absolute top-100 md:top-1/2 -translate-y-1/2 z-10 left-1/2 -translate-x-1/2 rotate-90 md:rotate-0"
+                className={`absolute top-100 md:top-1/2 -translate-y-1/2 z-10 left-1/2 -translate-x-1/2 md:rotate-0 ${
+                  locale === "fa" ? "-rotate-90" : "rotate-90"
+                }`}
               />
 
               <div className="relative h-80 md:h-full w-full md:justify-self-end max-w-sm rounded-xl bg-gray-900/10 lg:rounded-2xl">
@@ -245,23 +250,25 @@ export default async function Home() {
             </div>
           </div>
 
-          <ul className="smx-auto mt-12 max-w-prose sm:text-lg space-y-2 w-fit">
-            <li className="w-fit">
-              <Check className="h-5 w-5 text-green-600 inline mr-1.5" />
-              High-quality silicone material
-            </li>
-            <li className="w-fit">
-              <Check className="h-5 w-5 text-green-600 inline mr-1.5" />
-              Scratch - and fingerprint resistant coatings
-            </li>
-            <li className="w-fit">
-              <Check className="h-5 w-5 text-green-600 inline mr-1.5" />
-              High-quality silicone material
-            </li>
-            <li className="w-fit">
-              <Check className="h-5 w-5 text-green-600 inline mr-1.5" />
-              High-quality silicone material
-            </li>
+          <ul className="mx-auto mt-12 max-w-prose sm:text-lg space-y-2 w-fit">
+            {t.benefits.map((benefit, i) => (
+              <li key={i} className="w-fit">
+                <Check className="h-5 w-5 text-green-600 inline me-1.5" />
+                {benefit}
+              </li>
+            ))}
+
+            <div className="flex justify-center">
+              <Link
+                href="/configure/upload"
+                className={buttonVariants({
+                  size: "lg",
+                  className: "mx-auto mt-8",
+                })}
+              >
+                {t.createNow} <ArrowRight className="h-4 w-4 rtl:rotate-180" />
+              </Link>
+            </div>
           </ul>
         </MaxWIdthWraper>
       </section>

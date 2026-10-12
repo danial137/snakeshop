@@ -44,6 +44,13 @@ export const dictionaries = {
         highlight: "your own case",
         after: " now",
       },
+      benefits: [
+        "High-quality silicone material",
+        "Scratch- and fingerprint-resistant coatings",
+        "High-quality silicone material",
+        "5-year print warranty",
+      ],
+      createNow: "Create your case now",
     },
   },
 
@@ -92,6 +99,13 @@ export const dictionaries = {
         highlight: "قاب مخصوص خودتو",
         after: " همین حالا بگیر",
       },
+      benefits: [
+        "جنس سیلیکونی باکیفیت",
+        "پوشش ضدخش و ضدلک انگشت",
+        "جنس سیلیکونی باکیفیت",
+        "۵ سال گارانتی چاپ",
+      ],
+      createNow: "همین حالا قابتو بساز",
     },
   },
 };
