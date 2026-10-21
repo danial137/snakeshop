@@ -1,24 +1,36 @@
-import "./globals.css"
-import { Vazirmatn } from "next/font/google"
-import ThemeProvider from "@/components/ThemeProvider"
-import { getLocale } from "@/lib/locale"
-import Navbar from "@/components/Navbar"
+import "./globals.css";
+import { Vazirmatn } from "next/font/google";
+import ThemeProvider from "@/components/ThemeProvider";
+import { getLocale } from "@/lib/locale";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const vazirmatn = Vazirmatn({
   subsets: ["arabic", "latin"],
-})
+});
 
-export default async function RootLayout({ children }: { children: React.ReactNode }) {
-  const locale = await getLocale()
+export default async function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  const locale = await getLocale();
 
   return (
-    <html lang={locale} dir={locale === "fa" ? "rtl" : "ltr"} suppressHydrationWarning>
-      <body className={`${locale === "fa" ? vazirmatn.className : ""} bg-white text-gray-900 dark:bg-zinc-950 dark:text-zinc-100`}>
+    <html
+      lang={locale}
+      dir={locale === "fa" ? "rtl" : "ltr"}
+      suppressHydrationWarning
+    >
+      <body
+        className={`${locale === "fa" ? vazirmatn.className : ""} bg-white text-gray-900 dark:bg-zinc-950 dark:text-zinc-100`}
+      >
         <ThemeProvider>
           <Navbar />
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
-  )
+  );
 }
