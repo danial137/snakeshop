@@ -52,6 +52,12 @@ export const dictionaries = {
       ],
       createNow: "Create your case now",
     },
+    footer: {
+      rights: "All rights reserved",
+      terms: "Terms",
+      privacy: "Privacy Policy",
+      cookie: "Cookie Policy",
+    },
   },
 
   fa: {
@@ -106,6 +112,12 @@ export const dictionaries = {
         "۵ سال گارانتی چاپ",
       ],
       createNow: "همین حالا قابتو بساز",
+    },
+    footer: {
+      rights: "تمامی حقوق محفوظ است",
+      terms: "شرایط استفاده",
+      privacy: "حریم خصوصی",
+      cookie: "سیاست کوکی‌ها",
     },
   },
 };
