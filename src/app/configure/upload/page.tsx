@@ -89,7 +89,10 @@ const page = () => {
               </div>
 
               {isPending ? null : (
-                <p className="text-xs text-zinc-500"> PNG,JPG,JPEG</p>
+                <p className="text-xl text-zinc-500 dark:text-white">
+                  {" "}
+                  PNG,JPG,JPEG
+                </p>
               )}
             </div>
           )}
