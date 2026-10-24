@@ -10,14 +10,14 @@ import { Progress } from "@/components/ui/progress";
 
 const page = () => {
   const [isDragOver, setIsDragOver] = useState<boolean>(false);
-  const [uploadProgress, setUploadProgress] = useState<number>(45);
+  const [uploadProgress, setUploadProgress] = useState<number>(0);
 
   const onDropRejected = () => {};
   const onDropAccepted = () => {
     console.log("accepted");
   };
 
-  const isUploading = true;
+  const isUploading = false;
   const [isPending, startTransition] = useTransition();
 
   return (
@@ -60,21 +60,37 @@ const page = () => {
               )}
               <div className="flex flex-col justify-center mb-2 text-sm text-zinc-700">
                 {isUploading ? (
-                  <div className="flex flex-col items-center">
+                  <div className="flex flex-col items-center dark:text-white">
                     <p>Uploading...</p>
                     <Progress
-                      className="mt-20 w-40 h-2 bg-gray-300"
+                      className="mt-20 w-40 h-2 bg-gray-300 dark:text-white"
                       value={uploadProgress}
                     />
                   </div>
                 ) : isPending ? (
-                  <div></div>
+                  <div className="flex flex-col items-center dark:text-white">
+                    <p>Redirecting</p>
+                  </div>
                 ) : isDragOver ? (
-                  <span></span>
+                  <p>
+                    <span className="font-semibold dark:text-white">
+                      Drop file
+                    </span>
+                    to upload
+                  </p>
                 ) : (
-                  <span></span>
+                  <p className="dark:text-white font-semibold">
+                    <span className="font-semibold dark:text-white">
+                      click to upload {""}
+                      or drag and drop
+                    </span>
+                  </p>
                 )}
               </div>
+
+              {isPending ? null : (
+                <p className="text-xs text-zinc-500"> PNG,JPG,JPEG</p>
+              )}
             </div>
           )}
         </Dropzone>
